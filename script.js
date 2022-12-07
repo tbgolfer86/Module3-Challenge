@@ -6,7 +6,6 @@ var upperChoices = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
 var numberChoices = ['0','1','2','3','4','5','6','7','8','9'];
 var specialCharacters = ['!','@','#','$','%','^','&','*','_','-','+','='];
 var passwordLength
-var allChar
 var chosenCharacters = [];
 
 function generatePassword() {
@@ -16,49 +15,37 @@ function generatePassword() {
   }
   lowerCase = confirm("Click 'OK' to include lowercase letters in your password");
   if (lowerCase == true) {
-      let lower = chosenCharacters.concat(lowerChoices);
-      console.log(lower);
+      chosenCharacters = chosenCharacters.concat(lowerChoices);
+      console.log(chosenCharacters);
   }
   upperCase = confirm("Click 'OK' to include UPPERCASE letters in your password");
   if (upperCase == true) {
-      let upperLower = chosenCharacters.concat(lowerChoices,upperChoices);
-      console.log(upperLower);
+      chosenCharacters = chosenCharacters.concat(upperChoices);
+      console.log(chosenCharacters);
   }
   numbers = confirm("Click OK to include numbers in your password");
   if (numbers == true) {
-      let upperLowerNum = chosenCharacters.concat(lowerChoices,upperChoices,numberChoices);
-      console.log(upperLowerNum);
+      chosenCharacters = chosenCharacters.concat(numberChoices);
+      console.log(chosenCharacters);
   }
   specialChar = confirm("Click 'OK' to include special characters in your password");
   if (specialChar == true) {
-      let allChoices = chosenCharacters.concat(lowerChoices,upperChoices,numberChoices,specialCharacters);
-      allChar = allChoices
-      console.log(allChoices);
-      console.log(allChoices.length);
-    }
+      chosenCharacters = chosenCharacters.concat(specialCharacters);
+      console.log(chosenCharacters);
+  }
 
 } 
+
 function forLoop() {
   var pass =""
   for (let i = 0; i < passwordLength; i++) { 
     console.log("for loop ran")
-    let randomChar = allChar[Math.floor(Math.random() * allChar.length)];
+    let randomChar = chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)];
     pass = pass + randomChar;
   }
   console.log(pass)  
   return pass;      
 }
-
-// 1. prompt the user for password criteria
-//    a.password length 8 - 128 char
-//    b.lowercase, uppercase, numbers, special characters
-// 2. validate the input
-// 3. generate password
-// 4. display password on page
-//return randomPass;
-
-
-
 
 // Write password to the #password input
 function writePassword() {
