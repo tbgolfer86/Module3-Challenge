@@ -33,18 +33,18 @@ function generatePassword() {
       console.log(allChoices);
       console.log(allChoices.length)
     
+  }
+
+} 
+
+/**
+ * for (let i = 0; i < passwordLength; i++) {
       let randomPass = allChoices[Math.floor(Math.random() * allChoices.length)];
       console.log(randomPass);
-
-      return randomPass;
-  }
-      /*
-        for (let i = 0; i < allChoices.length; i++) {
-        let item = items[i];
-        
-        console.log(item);
-        */
     
+      return randomPass;
+    }
+ */
 
 
 // 1. prompt the user for password criteria
@@ -54,7 +54,7 @@ function generatePassword() {
 // 3. generate password
 // 4. display password on page
 //return randomPass;
-}
+
 
 
 
