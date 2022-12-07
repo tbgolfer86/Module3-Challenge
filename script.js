@@ -7,29 +7,29 @@ var numberChoices = ['0','1','2','3','4','5','6','7','8','9'];
 var specialCharacters = ['!','@','#','$','%','^','&','*','_','-','+','='];
 var passwordLength
 var allChar
+var chosenCharacters = [];
 
 function generatePassword() {
-  var chosenCharacters = [];
   passwordLength = prompt("Please enter the length of the password(8-128 characters)");
   if (passwordLength >= 129 || passwordLength <= 7) {
       generatePassword();
   }
-  var lowerCase = confirm("Click 'OK' to include lowercase letters in your password");
+  lowerCase = confirm("Click 'OK' to include lowercase letters in your password");
   if (lowerCase == true) {
       let lower = chosenCharacters.concat(lowerChoices);
       console.log(lower);
   }
-  var upperCase = confirm("Click 'OK' to include UPPERCASE letters in your password");
+  upperCase = confirm("Click 'OK' to include UPPERCASE letters in your password");
   if (upperCase == true) {
       let upperLower = chosenCharacters.concat(lowerChoices,upperChoices);
       console.log(upperLower);
   }
-  var numbers = confirm("Click OK to include numbers in your password");
+  numbers = confirm("Click OK to include numbers in your password");
   if (numbers == true) {
       let upperLowerNum = chosenCharacters.concat(lowerChoices,upperChoices,numberChoices);
       console.log(upperLowerNum);
   }
-  var specialChar = confirm("Click 'OK' to include special characters in your password");
+  specialChar = confirm("Click 'OK' to include special characters in your password");
   if (specialChar == true) {
       let allChoices = chosenCharacters.concat(lowerChoices,upperChoices,numberChoices,specialCharacters);
       allChar = allChoices
