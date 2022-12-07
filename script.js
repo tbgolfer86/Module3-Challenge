@@ -32,19 +32,16 @@ function generatePassword() {
       let allChoices = chosenCharacters.concat(lowerChoices,upperChoices,numberChoices,specialCharacters);
       console.log(allChoices);
       console.log(allChoices.length)
-    
-  }
-
-} 
-
-/**
- * for (let i = 0; i < passwordLength; i++) {
+  
       let randomPass = allChoices[Math.floor(Math.random() * allChoices.length)];
       console.log(randomPass);
     
       return randomPass;
     }
- */
+
+} 
+
+/*          for (let i = 0; i < passwordLength; i++) { }          */
 
 
 // 1. prompt the user for password criteria
