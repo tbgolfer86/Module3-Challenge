@@ -17,21 +17,30 @@ function generatePassword() {
   if (lowerCase == true) {
       chosenCharacters = chosenCharacters.concat(lowerChoices);
       console.log(chosenCharacters);
+  } else {
+      chosenCharacters = chosenCharacters;
   }
   upperCase = confirm("Click 'OK' to include UPPERCASE letters in your password");
   if (upperCase == true) {
       chosenCharacters = chosenCharacters.concat(upperChoices);
       console.log(chosenCharacters);
+  } else {
+      chosenCharacters = chosenCharacters;
   }
   numbers = confirm("Click OK to include numbers in your password");
   if (numbers == true) {
       chosenCharacters = chosenCharacters.concat(numberChoices);
       console.log(chosenCharacters);
+  } else {
+      chosenCharacters = chosenCharacters;
+
   }
   specialChar = confirm("Click 'OK' to include special characters in your password");
   if (specialChar == true) {
       chosenCharacters = chosenCharacters.concat(specialCharacters);
       console.log(chosenCharacters);
+  } else {
+    chosenCharacters = chosenCharacters;
   }
 
 } 
