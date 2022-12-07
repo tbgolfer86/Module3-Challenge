@@ -39,7 +39,7 @@ function generatePassword() {
 function forLoop() {
   var pass =""
   for (let i = 0; i < passwordLength; i++) { 
-    console.log("for loop ran")
+    console.log(passwordLength);
     let randomChar = chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)];
     pass = pass + randomChar;
   }
@@ -50,7 +50,7 @@ function forLoop() {
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  forLoop();
+  var password = forLoop();
 
   var passwordText = document.querySelector("#password");
 
