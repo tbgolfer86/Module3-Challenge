@@ -5,10 +5,12 @@ var lowerChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
 var upperChoices = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var numberChoices = ['0','1','2','3','4','5','6','7','8','9'];
 var specialCharacters = ['!','@','#','$','%','^','&','*','_','-','+','='];
+var passwordLength
+var allChar
 
 function generatePassword() {
   var chosenCharacters = [];
-  var passwordLength = prompt("Please enter the length of the password(8-128 characters)");
+  passwordLength = prompt("Please enter the length of the password(8-128 characters)");
   if (passwordLength >= 129 || passwordLength <= 7) {
       generatePassword();
   }
@@ -30,19 +32,22 @@ function generatePassword() {
   var specialChar = confirm("Click 'OK' to include special characters in your password");
   if (specialChar == true) {
       let allChoices = chosenCharacters.concat(lowerChoices,upperChoices,numberChoices,specialCharacters);
+      allChar = allChoices
       console.log(allChoices);
-      console.log(allChoices.length)
-  
-      let randomPass = allChoices[Math.floor(Math.random() * allChoices.length)];
-      console.log(randomPass);
-    
-      return randomPass;
+      console.log(allChoices.length);
     }
 
 } 
-
-/*          for (let i = 0; i < passwordLength; i++) { }          */
-
+function forLoop() {
+  var pass =""
+  for (let i = 0; i < passwordLength; i++) { 
+    console.log("for loop ran")
+    let randomChar = allChar[Math.floor(Math.random() * allChar.length)];
+    pass = pass + randomChar;
+  }
+  console.log(pass)  
+  return pass;      
+}
 
 // 1. prompt the user for password criteria
 //    a.password length 8 - 128 char
@@ -58,6 +63,8 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  forLoop();
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
