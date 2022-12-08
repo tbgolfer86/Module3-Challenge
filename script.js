@@ -14,8 +14,10 @@ var chosenCharacters = [];
 function generatePassword() {
   passwordLength = prompt("Please enter the length of the password(8-128 characters)");
   if (passwordLength >= 129 || passwordLength <= 7) {
-      generatePassword();
+      alert("Must be between 8-128 characters!");
+  return;
   }
+  
   lowerCase = confirm("Click 'OK' to include lowercase letters in your password");
   if (lowerCase == true) {
       chosenCharacters = chosenCharacters.concat(lowerChoices);
@@ -61,9 +63,9 @@ function writePassword() {
   var password = forLoop();
 clearChosen();
   var passwordText = document.querySelector("#password");
-
+ 
   passwordText.value = password;
-
+  
 }
 
 // Add event listener to generate button
