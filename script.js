@@ -40,7 +40,7 @@ function generatePassword() {
   }
 
 } 
-
+//loops through the chosenCharacters array
 function forLoop() {
   var pass =""
   for (let i = 0; i < passwordLength; i++) { 
@@ -52,7 +52,7 @@ function forLoop() {
   return pass; 
       
 }
-
+//clears chosenCharacters array to avoid having to refresh page to use again
 function clearChosen() {
   chosenCharacters = [];
 }
