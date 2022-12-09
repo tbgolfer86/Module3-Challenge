@@ -13,9 +13,11 @@ var chosenCharacters = [];
 
 function generatePassword() {
   passwordLength = prompt("Please enter the length of the password(8-128 characters)");
-  if (passwordLength >= 129 || passwordLength <= 7) {
+  if (passwordLength === null) {
+    return;
+  } else if (passwordLength >= 129 || passwordLength <= 7) {
       alert("Must be between 8-128 characters!");
-  return;
+    return;
   }
   
   lowerCase = confirm("Click 'OK' to include lowercase letters in your password");
