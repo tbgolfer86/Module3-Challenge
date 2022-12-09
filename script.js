@@ -20,22 +20,22 @@ function generatePassword() {
     return;
   }
   
-  lowerCase = confirm("Click 'OK' to include lowercase letters in your password");
+  lowerCase = confirm("Click 'OK' to include lowercase letters. Click 'Cancel' to skip");
   if (lowerCase == true) {
       chosenCharacters = chosenCharacters.concat(lowerChoices);
       console.log(chosenCharacters);
   }
-  upperCase = confirm("Click 'OK' to include UPPERCASE letters in your password");
+  upperCase = confirm("Click 'OK' to include UPPERCASE letters. Click 'Cancel' to skip");
   if (upperCase == true) {
       chosenCharacters = chosenCharacters.concat(upperChoices);
       console.log(chosenCharacters);
   }
-  numbers = confirm("Click OK to include numbers in your password");
+  numbers = confirm("Click OK to include numbers. Click 'Cancel' to skip");
   if (numbers == true) {
       chosenCharacters = chosenCharacters.concat(numberChoices);
       console.log(chosenCharacters);
   }
-  specialChar = confirm("Click 'OK' to include special characters in your password");
+  specialChar = confirm("Click 'OK' to include special characters. Click 'Cancel' to skip");
   if (specialChar == true) {
       chosenCharacters = chosenCharacters.concat(specialCharacters);
       console.log(chosenCharacters);
