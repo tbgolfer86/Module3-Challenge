@@ -13,5 +13,5 @@ This app runs in the browser. The user is prompted to choose a password length b
 https://tbgolfer86.github.io/Password-Generator/
 
 The screenshot below shows it open.
-![alt text](Screenshot%202022-12-06%20at%2011.45.16%20PM.png)
+![alt text](assets/Screenshot%202022-12-06%20at%2011.45.16%20PM.png)
 
