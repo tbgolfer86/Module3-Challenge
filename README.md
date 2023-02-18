@@ -22,7 +22,7 @@
 ---
 
   ## Usage
-  This app runs in the browser. The user is prompted to choose a password length between 8-128 characters followed by a series of confirmations that offer the option for the password to include lowercase, uppercase, numbers, and/or special characters.<br>
+  This app runs in the browser. The user is prompted to choose a password length between 8-128 characters followed by a series of confirmations that offer the option for the password to include lowercase, uppercase, numbers, and/or special characters.<br><br>
   https://tbgolfer86.github.io/Password-Generator/
 
   The screenshot below shows it open.
